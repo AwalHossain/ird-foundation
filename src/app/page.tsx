@@ -1,103 +1,124 @@
-import Image from "next/image";
+import { CategoryList } from "@/components/dua/CategoryList";
+import { DuaCard } from "@/components/dua/DuaCard";
+import { SettingsPanel } from "@/components/dua/SettingsPanel";
+import Header from "@/components/nav/Header";
+import Sidebar from "@/components/nav/Sidebar";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
-export default function Home() {
+const categories = [
+  {
+    id: 1,
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/a37335c491db102dd4338eb5494fe302ad829491?placeholderIfAbsent=true",
+    title: "Introduction to Dua",
+    subcategories: 11,
+    duas: 15,
+    isSelected: true,
+    subItems: [
+      "What is Dua",
+      "Conditions for Dua to be successful",
+      "The Methode Of Dua",
+      "Before Dua",
+      "During Dua",
+      "Prerequisites of writing Dua and drinking it's water",
+      "The correct way to perform Dua for a small child",
+    ],
+  },
+  {
+    id: 2,
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/a37335c491db102dd4338eb5494fe302ad829491?placeholderIfAbsent=true",
+    title: "Introduction to 2nd dua",
+    subcategories: 11,
+    duas: 15,
+    subItems: [
+      "What is Dua",
+      "Conditions for Dua to be successful",
+      "The Methode Of Dua",
+      "Before Dua",
+      "During Dua",
+      "Prerequisites of writing Dua and drinking it's water",
+      "The correct way to perform Dua for a small child",
+    ],
+  },
+  {
+    id: 3,
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/a37335c491db102dd4338eb5494fe302ad829491?placeholderIfAbsent=true",
+    title: "Introduction to 3rd dua",
+    subcategories: 11,
+    duas: 15,
+    subItems: [
+      "What is Dua",
+      "Conditions for Dua to be successful",
+      "The Methode Of Dua",
+      "Before Dua",
+    ],
+  },
+];
+
+const Page = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <TooltipProvider>
+      <div className="flex min-h-screen bg-[rgba(247,248,250,1)]">
+        <div className="sticky top-0 hidden h-screen pt-2 pb-5 pr-4 md:block">
+          <Sidebar />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="flex-1 overflow-y-auto p-6 pb-20 md:p-4 md:pl-0 md:pb-10">
+          <Header />
+
+          <div className="mt-[27px]">
+            <div className="gap-5 flex flex-col md:flex-row"> {/* Adjusted flex direction */}
+              <div className="sticky top-4 w-full max-h-[calc(100vh-100px)] overflow-y-auto lg:w-[25%]"> {/* Adjusted width */}
+                <CategoryList categories={categories} />
+              </div>
+
+              <div className="w-full lg:w-[50%] md:ml-5"> {/* Adjusted width/margin */}
+                <div className="w-full">
+                  {/* Section Header */}
+                  <div className="bg-white border flex w-full items-center gap-2.5 text-base flex-wrap px-4 py-3 md:px-[30px] md:py-[15px] rounded-[10px] border-gray-200 border-solid mb-4"> {/* Added margin-bottom */}
+                    <div className="text-green-700 font-semibold leading-loose self-stretch my-auto">
+                      Section:
+                    </div>
+                    <div className="text-gray-700 font-medium self-stretch my-auto">
+                      The servant is dependent on his Lord
+                    </div>
+                  </div>
+
+                  {/* Dua Cards */}
+                  <DuaCard
+                    number={1}
+                    title="The servant is dependent on his Lord #1"
+                    content="All human beings depend on Allah for their welfare and prevention of evil in various matters of their religion and world. Allah says (interpretation of the meaning): O mankind, you are those in need of Allah, while Allah is the Free of need, the Praiseworthy."
+                    reference="Surah Al-Fatir 35:15"
+                  />
+
+                  <DuaCard
+                    number={2}
+                    title="Conditions for Dua to be successful"
+                    content='Prophet (ﷺ) used to say after every compulsory prayer, The servant will ask his Lord for all of his religiously and worldly needs, because the treasure of all things is in the hands of Allah. Allah says (interpretation of the meaning): "And there is not a thing but that with Us are its depositories, and We do not send it down except according to a known measure." (Sura Al-Hijr 15:21) No one can withhold what Allah gives; And, no one can give what he resists.'
+                    arabicText="لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيْكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، اَللَّهُمَّ لَا مَانِعَ لِمَا أَعْطَيْتَ وَلَا مُعْطِيَ لِمَا مَنَعْتَ وَلَا يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ"
+                    transliteration="Laa ilaaha illallahu wahdahu laa sharika lahu, lahul-mulku wa lahul-hamdu wa huwa 'alaa kulli shay'in qadir. Allaahumma laa maani'a limaa a'taita wa laa mu'tia limaa mana'ta wa laa yanfa'u dhal-jaddi minka al-jaddu"
+                    translation="There is none worthy of worship except Allah alone with no partner or associate. He is the Dominion and to Him be all praise, and He is able to do all things. O Allah, one can withhold what You have given and none can give what You have withheld, and no wealth or fortune can benefit anyone for from You comes all wealth and fortune."
+                    reference="Bukhari: 844"
+                  />
+                </div>
+              </div>
+
+              <div className="w-full lg:w-[25%] md:ml-5"> {/* Adjusted width/margin */}
+                <SettingsPanel />
+              </div>
+            </div>
+          </div>
+        </div> {/* End Main Content Area */} 
+
+        {/* Sidebar container (for mobile layout - rendered outside main content flow) */}
+        {/* Shown only on mobile (md:hidden) */}
+        <div className="md:hidden"> 
+          <Sidebar />
+        </div>
+
+      </div> {/* End Flex Container */}
+    </TooltipProvider>
   );
-}
+};
+
+export default Page;

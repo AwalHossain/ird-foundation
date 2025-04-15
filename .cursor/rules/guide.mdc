@@ -1,0 +1,11 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Your rule content
+
+- You can @ files here
+- You can use markdown but dont have to
+- Instituted industry-standard practices for file and folder organization—including well-defined naming conventions and modular subdirectory structures—to promote code clarity and maintainability; simultaneously enforced semantic HTML and modular CSS standards while integrating robust SEO strategies and leveraging Next.js SSG for optimized static site generation and enhanced page performance
