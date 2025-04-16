@@ -16,9 +16,6 @@ const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  // Header height for the placeholder
-  const headerHeight = 64;
-
   // Handle scroll events
   useEffect(() => {
     const controlHeader = () => {

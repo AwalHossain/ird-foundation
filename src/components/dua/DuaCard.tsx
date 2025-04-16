@@ -21,14 +21,13 @@ export const DuaCard: React.FC<DuaCardProps> = ({
   transliteration,
   translation,
   reference,
-  audio,
 }) => {
   return (
     <div className="bg-white border w-full mt-2.5 px-[30px] py-[15px] rounded-[10px] border-[rgba(226,226,226,1)] border-solid">
       <div className="flex w-full flex-col items-stretch text-base text-[rgba(57,57,57,1)] font-normal leading-6 justify-center">
         <div className="flex w-full items-center gap-2.5 text-[rgba(31,164,91,1)] font-semibold leading-loose flex-wrap">
           <Image
-          alt={title}
+            alt={title}
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/b76a742135230c3749b92e44761c6dc79aba353a?placeholderIfAbsent=true"
             className="aspect-[1] object-contain w-[35px] self-stretch shrink-0 my-auto"
             width={35}

@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import { useState } from 'react';
 
 interface CategoryIconProps {
@@ -18,37 +19,37 @@ export default function CategoryIcon({
 }: CategoryIconProps) {
   const [error, setError] = useState(false);
   const defaultIcon = '/default-icon.svg';
-  
+
   // Function to handle image errors
   const handleError = () => {
     console.warn(`Failed to load image: ${iconPath}`);
     setError(true);
   };
-  
+
   // If no icon path provided or there was an error, use the default
   if (!iconPath || error) {
     return (
-      <img
-        src={defaultIcon}
+      <Image
         alt={altText}
+        src={defaultIcon}
         className={className}
         width={width}
         height={height}
       />
     );
   }
-  
+
   // For database icon paths (referenced in SQLite), check if we need to prepend
   // the "/images/" path or not
   let finalIconPath = iconPath;
-  
+
   // If it's not a full URL and doesn't start with a slash and doesn't already include /images/
   if (!iconPath.startsWith('http') && !iconPath.startsWith('/') && !iconPath.includes('/images/')) {
     finalIconPath = `/images/${iconPath}`;
   }
-  
+
   return (
-    <img
+    <Image
       src={finalIconPath}
       alt={altText}
       className={className}
