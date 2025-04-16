@@ -9,7 +9,7 @@ dotenv.config({ path: path.resolve(__dirname, '../../.env.local') });
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const DB_PATH = process.env.DB_PATH || '../dua_main.sqlite';
+const DB_PATH = process.env.DB_PATH || './dua_main.sqlite';
 
 // Middleware
 app.use(cors());
