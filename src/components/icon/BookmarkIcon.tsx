@@ -1,0 +1,31 @@
+import React from 'react';
+
+interface BookmarkIconProps {
+  className?: string;
+}
+
+const BookmarkIcon: React.FC<BookmarkIconProps> = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="bookmark 1">
+        <path
+          id="Vector"
+          d="M4.99973 5C4.99973 4.46956 5.21044 3.96086 5.58551 3.58579C5.96058 3.21071 6.46929 3 6.99972 3H16.9997C17.5301 3 18.0388 3.21071 18.4139 3.58579C18.789 3.96086 18.9997 4.46956 18.9997 5V21L11.9997 17.5L4.99973 21V5Z"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+    </svg>
+  );
+};
+
+export default BookmarkIcon; 
