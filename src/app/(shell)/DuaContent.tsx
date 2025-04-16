@@ -141,7 +141,7 @@ export function DuaContent({
     }
 
     fetchDuas();
-  }, [categoryId, subcategoryId, cacheKey, onCacheUpdate]);
+  }, [categoryId, subcategoryId, cacheKey, onCacheUpdate, cachedContent]);
 
   // Scroll to top when category or subcategory changes
   useEffect(() => {
