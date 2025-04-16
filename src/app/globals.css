@@ -9,6 +9,7 @@
   --color-custom-gray-light: #7E7E7E;
   --color-custom-gray-light-hover: #A4A4A4;
   --color-custom-greenish: rgba(207,224,229,1);
+  --color-custom-white-gray: #F7F8FA;
 }
 
 @layer base {
@@ -151,4 +152,22 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Custom scrollbar - add to globals.css */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;               /* thin scrollbar width */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;  /* or any color like #f1f1f1 */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-custom-green); /* using your theme color */
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-custom-gray-medium);
 }
