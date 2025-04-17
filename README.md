@@ -25,19 +25,19 @@ A comprehensive Islamic application for accessing supplications (duas) and ruqya
 
 ### Core Functionality
 - **Categorized Duas** - Browse duas by categories and subcategories
-- **Search** - Find specific duas by name or content
-- **Audio Support** - Listen to duas with embedded audio player
+- **Search** - Find specific duas by name or content(Not implemented yet)
+- **Audio Support** - Listen to duas with embedded audio player(Not implemented yet)
 - **Arabic Text** - Original Arabic text with beautiful typography
 - **Translations** - English translations and transliterations
-- **Bookmarks** - Save favorite duas for quick access
-- **Memorization Tools** - Features to help memorize duas
+- **Bookmarks** - Save favorite duas for quick access(Not implemented yet)
+- **Memorization Tools** - Features to help memorize duas(Not implemented yet)
 
 ### Technical Features
 - **Static Site Generation** - Pre-rendered pages for optimal performance
 - **Optimized Loading** - Smart caching of dua content to minimize API calls
 - **Performance Focused** - Smooth scrolling and transitions
 - **Offline Support** - Access duas without internet connection
-- **Dark/Light Mode** - Customizable UI theme
+- **Dark/Light Mode** - Customizable UI theme(Not implemented yet)
 - **Custom Scrollbars** - Enhanced scrolling experience
 
 ## 🚀 Tech Stack
